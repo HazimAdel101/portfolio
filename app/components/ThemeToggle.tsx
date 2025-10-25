@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
@@ -9,55 +10,46 @@ export default function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
     // Check system preference on mount
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme');
-    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-    
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const savedTheme = localStorage.getItem("theme");
+    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+
     setIsDark(shouldBeDark);
     if (shouldBeDark) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
   const toggleTheme = () => {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
-    
+
     const html = document.documentElement;
     if (newIsDark) {
-      html.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      console.log('Dark mode enabled, html classes:', html.className);
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      html.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      console.log('Light mode enabled, html classes:', html.className);
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   };
 
   // Prevent hydration mismatch
   if (!mounted) {
     return (
-      <button
-        className="px-4 py-2 rounded-lg bg-[var(--primary-button)] text-[var(--text-button-primary)] hover:opacity-90 transition-opacity opacity-50"
-        aria-label="Toggle theme"
-        disabled
-      >
-        🌓 Theme
-      </button>
+      <span className="opacity-50" aria-label="Toggle theme">
+        {isDark ? <Moon className="size-4" /> : <Sun className="size-4" />}
+      </span>
     );
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="px-4 py-2 rounded-lg bg-[var(--primary-button)] text-[var(--text-button-primary)] hover:opacity-90 transition-opacity"
-      aria-label="Toggle theme"
-    >
-      {isDark ? '🌞 Light Mode' : '🌙 Dark Mode'}
-    </button>
+    <span onClick={toggleTheme} className="cursor-pointer text-black dark:text-white">
+      {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+    </span>
   );
 }
-
