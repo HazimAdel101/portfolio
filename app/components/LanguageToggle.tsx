@@ -1,65 +1,54 @@
 "use client";
 
 import { Globe } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
+import { useTransition } from 'react';
+import { routing } from '@/i18n/routing';
 
 export default function LanguageToggle() {
-  const [isArabic, setIsArabic] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    // Check saved language preference on mount
-    const savedLanguage = localStorage.getItem("language");
-    const shouldBeArabic = savedLanguage === "ar";
-
-    setIsArabic(shouldBeArabic);
-    if (shouldBeArabic) {
-      document.documentElement.setAttribute("dir", "rtl");
-      document.documentElement.setAttribute("lang", "ar");
-    } else {
-      document.documentElement.setAttribute("dir", "ltr");
-      document.documentElement.setAttribute("lang", "en");
-    }
-  }, []);
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
 
   const toggleLanguage = () => {
-    const newIsArabic = !isArabic;
-    setIsArabic(newIsArabic);
-
-    const html = document.documentElement;
-    if (newIsArabic) {
-      html.setAttribute("dir", "rtl");
-      html.setAttribute("lang", "ar");
-      localStorage.setItem("language", "ar");
-    } else {
-      html.setAttribute("dir", "ltr");
-      html.setAttribute("lang", "en");
-      localStorage.setItem("language", "en");
-    }
+    const newLocale = locale === 'en' ? 'ar' : 'en';
+    
+    startTransition(() => {
+      // Replace the locale in the pathname
+      const segments = pathname.split('/');
+      if (segments[1] && routing.locales.includes(segments[1] as 'en' | 'ar')) {
+        segments[1] = newLocale;
+      } else {
+        segments.splice(1, 0, newLocale);
+      }
+      const newPathname = segments.join('/') || `/${newLocale}`;
+      router.push(newPathname);
+      
+      // Update HTML attributes
+      const html = document.documentElement;
+      if (newLocale === 'ar') {
+        html.setAttribute('dir', 'rtl');
+        html.setAttribute('lang', 'ar');
+      } else {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', 'en');
+      }
+    });
   };
-
-  // Prevent hydration mismatch
-  if (!mounted) {
-    return (
-      <span
-        className="opacity-50 flex items-center gap-2"
-        aria-label="Toggle language"
-      >
-        <Globe className="size-4" />
-        <span className="text-sm">En</span>
-      </span>
-    );
-  }
 
   return (
     <span
       onClick={toggleLanguage}
       className="cursor-pointer opacity-50 flex items-center gap-2"
       aria-label="Toggle language"
+      aria-disabled={isPending}
     >
       <Globe className="size-4 text-black dark:text-white" />
-      <span className="text-sm text-black dark:text-white">{isArabic ? "Ar" : "En"}</span>
+      <span className="text-sm text-black dark:text-white">
+        {locale === 'ar' ? 'Ar' : 'En'}
+      </span>
     </span>
   );
 }

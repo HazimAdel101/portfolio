@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "greeting": "Hello!",
+    "title": "I'm Hazem Al-Saggaf,",
+    "titleHighlight": "a Web Developer",
+    "titleEnd": "helping you turn your idea into a successful digital product.",
+    "ctaPrimary": "Order your project now",
+    "ctaSecondary": "See my Work",
+    "stats": {
+      "experience": "Years",
+      "experienceLabel": "Experiences",
+      "projects": "Projects done",
+      "clients": "Happy Clients"
+    }
+  },
+  "about": {
+    "title": "Who is he?",
+    "titleHighlight": "Hazem Al-Saggaf",
+    "subtitle": "A brief introduction about myself and my journey as a web developer.",
+    "heading": "Who is Hazem Al-Saggaf?",
+    "description": "I am an excellent frontend developer with expertise in HTML, CSS, JavaScript, and React.js. I specialize in creating beautiful, responsive, and user-friendly web applications that provide exceptional user experiences.",
+    "personalSkills": "Personal skills",
+    "downloadCV": "Download CV"
+  },
+  "services": {
+    "title": "What are the services?",
+    "titleHighlight": "What do I offer",
+    "subtitle": "Comprehensive web development services to bring your digital vision to life.",
+    "webDevelopment": "Web Development",
+    "webDevelopmentDesc": "I offer web design and development services using the latest advanced technologies, focusing on user experience and an attractive interface. I work to turn your ideas into a distinguished digital reality.",
+    "responsiveDesign": "Responsive Design",
+    "uiUxDesign": "UI/UX Design",
+    "webApplication": "Web Application",
+    "ecommerce": "E-commerce",
+    "serviceDesc": "Reusable solutions to common design problems that improve code organization and reduce complexity."
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Technologies and tools I use to build amazing digital experiences.",
+    "otherSkills": "Other Skills",
+    "toolsWorkflow": "Tools and Workflow",
+    "technologies": "Technologies I know well"
+  },
+  "portfolio": {
+    "title": "See the best",
+    "titleHighlight": "My work",
+    "subtitle": "A showcase of my recent projects and digital creations.",
+    "viewProject": "View Project",
+    "liveDemo": "Live Demo",
+    "viewAll": "View All Projects",
+    "webDesign": "Web Design",
+    "webApp": "Web Application"
+  },
+  "testimonials": {
+    "title": "Customer Reviews",
+    "titleHighlight": "About My Services",
+    "subtitle": "What clients say about working with me."
+  },
+  "contact": {
+    "title": "Hit me up",
+    "subtitle": "Let's discuss your next project and bring your ideas to life.",
+    "formTitle": "Drop me a message!",
+    "name": "Your Name Here",
+    "email": "Your Email Address",
+    "phone": "Your Phone",
+    "message": "Your Message Here",
+    "send": "Send it!",
+    "contactInfo": "Contact Info",
+    "emailLabel": "Email Address",
+    "phoneLabel": "Phone Number",
+    "locationLabel": "Location",
+    "followMe": "Follow me up"
+  },
+  "footer": {
+    "description": "A portfolio website showcasing my work and services as a web developer.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About me",
+    "contact": "Contact me",
+    "rights": "All rights reserved."
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact me"
+  },
+  "skillsList": {
+    "teamwork": "Teamwork",
+    "creativity": "Creativity",
+    "problemSolving": "Problem-solving",
+    "adaptability": "Adaptability"
+  },
+  "toolsList": {
+    "figma": "Figma",
+    "vscode": "VS Code",
+    "git": "Git",
+    "jira": "Jira"
+  },
+  "projects": {
+    "mountainEscapade": {
+      "title": "Mountain Escapade",
+      "description": "An immersive travel app focusing on outdoor adventures for young explorers, incorporating vibrant visuals and engaging community features.",
+      "tech": ["Angular JS", "React JS", "Node JS"]
+    },
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "A full-featured e-commerce solution with modern design and seamless user experience.",
+      "tech": ["Next.js", "TypeScript", "MongoDB"]
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "A beautiful and responsive portfolio website showcasing creative work and professional achievements.",
+      "tech": ["React", "Tailwind CSS", "Framer Motion"]
+    }
+  },
+  "testimonialsList": {
+    "sara": {
+      "name": "Sara Jackson",
+      "role": "Product Manager",
+      "review": "Fast, collaborative, and got it right from the start! Our idea turned into a successful project in no time. A truly professional experience."
+    },
+    "alex": {
+      "name": "Alex Smith",
+      "role": "CEO, Tech Startup",
+      "review": "Exceptional work quality and attention to detail. The project exceeded our expectations and was delivered on time."
+    }
+  }
+}
+
