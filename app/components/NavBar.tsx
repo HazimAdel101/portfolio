@@ -7,6 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
 import { NavLink } from "./NavLink.NavBar";
 import { useTranslations } from 'next-intl';
+import { NAVIGATION_LINKS } from "@/app/config/navigation";
 
 export const NavBar = () => {
   const t = useTranslations();
@@ -18,11 +19,13 @@ export const NavBar = () => {
           <Image className="my-auto" src="/logo.png" alt="logo" width={50} height={50} />
         </Link>
         <div className="flex items-center gap-4">
-          <NavLink href="/" title={t('nav.home')} />
-          <NavLink href="#projects" title={t('nav.projects')} />
-          <NavLink href="#services" title={t('nav.services')} />
-          <NavLink href="#about" title={t('nav.about')} />
-          <NavLink href="#contact" title={t('nav.contact')} />
+          {NAVIGATION_LINKS.map((link) => (
+            <NavLink 
+              key={link.key} 
+              href={link.href} 
+              title={t(`nav.${link.key}`)} 
+            />
+          ))}
         </div>
 
         <div className="flex items-center gap-4">
