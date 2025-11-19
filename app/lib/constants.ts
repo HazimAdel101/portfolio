@@ -30,3 +30,11 @@ export const CONTACT_INFO = {
   location: "Your City, Country",
 } as const;
 
+export const QUICK_LINKS = [
+  { href: "#hero", key: "home" },
+  { href: "#services", key: "services" },
+  { href: "#projects", key: "portfolio" },
+  { href: "#about", key: "about" },
+  { href: "#contact", key: "contact" },
+] as const;
+
