@@ -7,6 +7,7 @@ import { ProfileImage } from "./ProfileImage";
 import { StatCard } from "./StatCard";
 import { BackgroundPattern } from "./BackgroundPattern";
 import { useHeroData } from "@/app/hooks";
+import Image from "next/image";
 
 export function HeroSection() {
   const {
@@ -20,8 +21,8 @@ export function HeroSection() {
   } = useHeroData();
 
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       className="relative min-h-screen flex items-center justify-center bg-[var(--hero-section)] dark:bg-[var(--background)] px-4 py-20 pt-32 overflow-hidden"
     >
       <BackgroundPattern />
@@ -31,14 +32,21 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                <Badge className="bg-[var(--chips-bg)] text-[var(--chips-text)] border-none px-4 py-2 text-base">
-                  {greeting}
-                </Badge>
+              <div className="relative ms-6 w-fit">
+                <Image
+                  className="absolute -top-4 -end-8 rtl:rotate-[270deg]"
+                  src="/hello-icon.svg"
+                  alt="Greeting"
+                  width={28}
+                  height={28}
+                />
+                <span className="flex items-center gap-2">{greeting}</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-[var(--text-title)] dark:text-white">
                 {title}{" "}
-                <span className="font-semibold text-[var(--text-primary)]">{titleHighlight}</span>{" "}
+                <span className="font-semibold text-[var(--text-primary)]">
+                  {titleHighlight}
+                </span>{" "}
                 {titleEnd}
               </h1>
             </div>
@@ -48,8 +56,8 @@ export function HeroSection() {
                 {ctaPrimary}
                 <ButtonArrow color="#ffffff" />
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="border-[var(--text-primary)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white rounded-full px-8 py-6 h-auto group"
               >
                 {ctaSecondary}
@@ -63,18 +71,18 @@ export function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-4 border-t border-[var(--gray-300)]">
+            <div className="flex flex-wrap gap-8 pt-4">
               {stats.map((stat, index) => (
-                <StatCard key={index} value={stat.value} label={stat.label} />
+                <>
+                  <StatCard key={index} value={stat.value} label={stat.label} />
+                  <div className="h-16 bg-[#D1D5DB] w-[1px]"></div>
+                </>
               ))}
             </div>
           </div>
-
-          {/* Right Content - Profile Image */}
           <ProfileImage />
         </div>
       </div>
     </section>
   );
 }
-

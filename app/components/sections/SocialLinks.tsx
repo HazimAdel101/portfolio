@@ -1,10 +1,7 @@
-type SocialLink = {
-  name: string;
-  url?: string;
-};
+import type { SocialLink } from '@/app/types';
 
 type SocialLinksProps = {
-  links: SocialLink[];
+  links: readonly SocialLink[];
   variant?: 'default' | 'footer';
   className?: string;
 };

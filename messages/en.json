@@ -1,7 +1,7 @@
 {
   "hero": {
     "greeting": "Hello!",
-    "title": "I'm Hazem Al-Saggaf,",
+    "title": "I'm Hazim Al-Saqqaf,",
     "titleHighlight": "a Web Developer",
     "titleEnd": "helping you turn your idea into a successful digital product.",
     "ctaPrimary": "Order your project now",
@@ -15,9 +15,9 @@
   },
   "about": {
     "title": "Who is he?",
-    "titleHighlight": "Hazem Al-Saggaf",
+    "titleHighlight": "Hazim Al-Saqqaf",
     "subtitle": "A brief introduction about myself and my journey as a web developer.",
-    "heading": "Who is Hazem Al-Saggaf?",
+    "heading": "Who is Hazim Al-Saqqaf?",
     "description": "I am an excellent frontend developer with expertise in HTML, CSS, JavaScript, and React.js. I specialize in creating beautiful, responsive, and user-friendly web applications that provide exceptional user experiences.",
     "personalSkills": "Personal skills",
     "downloadCV": "Download CV"

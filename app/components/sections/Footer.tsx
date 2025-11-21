@@ -48,7 +48,7 @@ export function Footer() {
         </div>
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © {new Date().getFullYear()} Hazem Al-Saggaf. {t('footer.rights')}
+            © {new Date().getFullYear()} Hazim Al-Saqqaf. {t('footer.rights')}
           </p>
           <SocialLinks links={socialLinks} variant="footer" className="mt-4 md:mt-0" />
         </div>

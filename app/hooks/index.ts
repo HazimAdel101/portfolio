@@ -21,3 +21,5 @@ export {
   useContactTranslations,
 } from './useSectionTranslations';
 
+export { useActiveSection } from './useActiveSection';
+

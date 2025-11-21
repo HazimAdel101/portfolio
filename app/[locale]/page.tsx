@@ -13,7 +13,6 @@ import {
 } from "@/app/components/sections";
 import { getEnabledSections } from "@/app/config/sections";
 
-// Section component mapping
 const SECTION_COMPONENTS = {
   hero: HeroSection,
   portfolioThumbnails: PortfolioThumbnailsSection,

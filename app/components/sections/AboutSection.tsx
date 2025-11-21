@@ -14,7 +14,10 @@ export function AboutSection() {
   const personalSkills = usePersonalSkillsData();
 
   return (
-    <section id="about" className="py-20 bg-[var(--hero-section)] dark:bg-[var(--background)]">
+    <section
+      id="about"
+      className="py-20 bg-[var(--hero-section)] dark:bg-[var(--background)]"
+    >
       <div className="container mx-auto max-w-7xl px-4">
         <SectionHeader
           title={translations.title}
@@ -44,10 +47,7 @@ export function AboutSection() {
               </h4>
               <div className="flex flex-wrap gap-3">
                 {personalSkills.map((skill) => (
-                  <Badge
-                    key={skill.name}
-                    className="bg-[var(--chips-bg)] text-[var(--chips-text)] border-none px-4 py-2 text-base"
-                  >
+                  <Badge key={skill.name} className="px-4 py-2 text-base">
                     {skill.name}
                   </Badge>
                 ))}
@@ -64,4 +64,3 @@ export function AboutSection() {
     </section>
   );
 }
-

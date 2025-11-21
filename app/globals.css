@@ -84,64 +84,32 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Dark Mode - System Preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    /* Background Colors */
-    --card-background: var(--color-white);
-    --hero-section: var(--color-white);
-    --element: var(--color-white);
-
-    /* UI Elements */
-    --primary-button: var(--purple-700);
-    --chips-bg: var(--color-white);
-    --chips-text: var(--purple-500);
-    --footer: var(--color-dark-purple);
-
-    /* Strokes & Borders */
-    --stroke: var(--color-white);
-    --stroke-input: var(--color-white);
-
-    /* Text Colors */
-    --text-title: var(--color-white);
-    --text-subtitle: var(--color-white);
-    --text-primary: var(--purple-700);
-    --text-button-primary: var(--color-white);
-    --text-button-secondary: var(--purple-500);
-
-    /* Purple Scale */
-    --purple-800: var(--color-dark-purple);
-  }
-}
-
 /* Dark Mode - Manual Class Override */
 html.dark {
   color-scheme: dark;
 
   /* Background Colors */
   --background: var(--color-dark-purple);
-  --card-background: var(--color-white);
-  --hero-section: var(--color-white);
-  --element: var(--color-white);
+  --card-background: var(--purple-800);
+  --hero-section: var(--color-dark-purple);
+  --element: var(--purple-800);
 
   /* UI Elements */
-  --primary-button: var(--purple-700);
-  --chips-bg: var(--color-white);
-  --chips-text: var(--purple-500);
+  --primary-button: var(--purple-500);
+  --chips-bg: var(--purple-800);
+  --chips-text: var(--purple-300);
   --footer: var(--color-dark-purple);
 
   /* Strokes & Borders */
-  --stroke: var(--color-white);
-  --stroke-input: var(--color-white);
+  --stroke: var(--gray-700);
+  --stroke-input: var(--gray-700);
 
   /* Text Colors */
   --text-title: var(--color-white);
-  --text-subtitle: var(--color-white);
-  --text-primary: var(--purple-700);
+  --text-subtitle: var(--gray-300);
+  --text-primary: var(--purple-300);
   --text-button-primary: var(--color-white);
-  --text-button-secondary: var(--purple-500);
+  --text-button-secondary: var(--purple-300);
 
   /* Purple Scale */
   --purple-800: var(--color-dark-purple);
