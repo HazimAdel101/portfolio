@@ -1,8 +1,3 @@
-/**
- * Application-wide constants
- * Centralized location for all static data and configuration
- */
-
 import type { SocialLink } from '@/app/types';
 
 export const TECHNOLOGIES = [
@@ -18,16 +13,16 @@ export const TECHNOLOGIES = [
 ] as const;
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
-  { name: "LinkedIn", url: "#" },
-  { name: "GitHub", url: "#" },
-  { name: "Twitter", url: "#" },
-  { name: "Dribbble", url: "#" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/hazim-alsaqqaf/" },
+  { name: "GitHub", url: "https://github.com/HazimAdel101" },
+  { name: "X", url: "https://x.com/HazimAlsaqqaf" },
+  { name: "Instagram", url: "https://www.instagram.com/hazim_alsaqqaf" },
 ] as const;
 
 export const CONTACT_INFO = {
-  email: "contact@example.com",
-  phone: "+1 234 567 890",
-  location: "Your City, Country",
+  email: "hello@coder4u.com",
+  phone: "+967 780 172 130",
+  location: "Sana'a, Yemen",
 } as const;
 
 export const QUICK_LINKS = [
