@@ -1,5 +1,6 @@
 import type { SocialLink } from "@/app/types";
 import Image from "next/image";
+import { Icon } from "@iconify-icon/react";
 
 type SocialLinksProps = {
   links: readonly SocialLink[];
@@ -26,8 +27,7 @@ export function SocialLinks({
           className={baseClasses}
           aria-label={social.name}
         >
-          <Image src={social.icon || ""} alt={social.name} width={20} height={20} />
-          <span className="text-sm">{social.name[0]}</span>
+          <Icon icon={social.icon || ""} width={20} height={20} />
         </a>
       ))}
     </div>

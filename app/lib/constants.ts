@@ -1,4 +1,4 @@
-import type { SocialLink } from '@/app/types';
+import type { SocialLink } from "@/app/types";
 
 export const TECHNOLOGIES = [
   "HTML",
@@ -13,10 +13,22 @@ export const TECHNOLOGIES = [
 ] as const;
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/hazim-alsaqqaf/" },
-  { name: "GitHub", url: "https://github.com/HazimAdel101" },
-  { name: "X", url: "https://x.com/HazimAlsaqqaf" },
-  { name: "Instagram", url: "https://www.instagram.com/hazim_alsaqqaf" },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/hazim-alsaqqaf/",
+    icon: "lucide:linkedin",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/HazimAdel101",
+    icon: "lucide:github",
+  },
+  { name: "X", url: "https://x.com/HazimAlsaqqaf", icon: "lucide:x" },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/hazim_alsaqqaf",
+    icon: "lucide:instagram",
+  },
 ] as const;
 
 export const CONTACT_INFO = {
@@ -32,4 +44,3 @@ export const QUICK_LINKS = [
   { href: "#about", key: "about" },
   { href: "#contact", key: "contact" },
 ] as const;
-
