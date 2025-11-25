@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Portfolio
+    ports:
+      - "3111:3111"
+    # uncomment if you have env vars
+    # env_file:
+    #   - .env.production
+    restart: unless-stopped
