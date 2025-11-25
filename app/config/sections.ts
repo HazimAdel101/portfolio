@@ -11,13 +11,13 @@ export const SECTION_CONFIG: Record<string, SectionConfig> = {
     enabled: true,
     order: 1,
   },
-  portfolioThumbnails: {
-    id: 'portfolioThumbnails',
+  about: {
+    id: 'about',
     enabled: true,
     order: 2,
   },
-  about: {
-    id: 'about',
+  portfolioThumbnails: {
+    id: 'portfolioThumbnails',
     enabled: true,
     order: 3,
   },

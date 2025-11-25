@@ -39,8 +39,8 @@ export const CONTACT_INFO = {
 
 export const QUICK_LINKS = [
   { href: "#hero", key: "home" },
+  { href: "#about", key: "about" },
   { href: "#services", key: "services" },
   { href: "#projects", key: "portfolio" },
-  { href: "#about", key: "about" },
   { href: "#contact", key: "contact" },
 ] as const;
