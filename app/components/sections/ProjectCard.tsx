@@ -10,10 +10,9 @@ type ProjectCardProps = {
   category: string;
   description: string;
   technologies: string[];
-  image?: string;
 };
 
-export function ProjectCard({ title, category, description, technologies, image }: ProjectCardProps) {
+export function ProjectCard({ title, category, description, technologies }: ProjectCardProps) {
   const t = useTranslations();
 
   return (

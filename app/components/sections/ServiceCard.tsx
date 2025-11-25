@@ -1,11 +1,11 @@
 type ServiceCardProps = {
   title: string;
   icon: string;
-  description: string;
+  description?: string;
   variant?: 'featured' | 'default';
 };
 
-export function ServiceCard({ title, icon, description, variant = 'default' }: ServiceCardProps) {
+export function ServiceCard({ title, icon, description = '', variant = 'default' }: ServiceCardProps) {
   if (variant === 'featured') {
     return (
       <div className="bg-[var(--text-primary)] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">

@@ -19,7 +19,7 @@ export function TestimonialCard({ name, role, review, rating }: TestimonialCardP
             ))}
           </div>
           <p className="text-[var(--text-subtitle)] dark:text-gray-300 mb-4 leading-relaxed">
-            "{review}"
+            &ldquo;{review}&rdquo;
           </p>
           <div>
             <p className="font-semibold text-[var(--text-title)] dark:text-white">

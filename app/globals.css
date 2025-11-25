@@ -115,6 +115,11 @@ html.dark {
   --purple-800: var(--color-dark-purple);
 }
 
+:root {
+  --font-geist-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
 @theme {
   --font-family-sans: var(--font-geist-sans);
   --font-family-mono: var(--font-geist-mono);

@@ -1,5 +1,4 @@
 import type { SocialLink } from "@/app/types";
-import Image from "next/image";
 import { Icon } from "@iconify-icon/react";
 
 type SocialLinksProps = {
