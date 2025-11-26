@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("/fonts/stylesheet.css");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -116,12 +117,12 @@ html.dark {
 }
 
 :root {
-  --font-geist-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-ibm-plex-sans-arabic: "IBM Plex Sans Arabic", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-geist-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
 @theme {
-  --font-family-sans: var(--font-geist-sans);
+  --font-family-sans: var(--font-ibm-plex-sans-arabic);
   --font-family-mono: var(--font-geist-mono);
 }
 
@@ -129,6 +130,7 @@ body {
   background-color: var(--background);
   color: var(--text-subtitle);
   transition: background-color 0.3s, color 0.3s;
+  font-family: var(--font-ibm-plex-sans-arabic);
 }
 
 @theme inline {
